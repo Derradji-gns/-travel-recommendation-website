@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wandergram | Travel Recommendations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar">
+    <div class="container">
+      <a href="#home" class="brand" data-nav="home">
+        <span class="brand-mark">W</span>
+        Wandergram
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="#home" data-nav="home">Home</a></li>
+          <li><a href="#about" data-nav="about">About Us</a></li>
+          <li><a href="#contact" data-nav="contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Search only makes sense on the Home page -->
+      <form class="nav-search" id="search-form" role="search" data-home-only>
+        <label for="search-input" class="visually-hidden">Search destinations</label>
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Try 'beach', 'temple', 'Japan'…"
+          autocomplete="off"
+        />
+        <button type="submit" id="search-btn" class="btn btn-primary">Search</button>
+        <button type="button" id="reset-btn" class="btn btn-ghost">Reset</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================== HOME PAGE ===================== -->
+    <section class="page-section" id="page-home" data-page="home">
+
+      <section class="hero">
+        <div class="container hero-inner">
+          <span class="eyebrow">Wandergram Recommends</span>
+          <h1>Find your next trip, not another scroll.</h1>
+          <p>
+            Search by mood — beach, temple, or country — and we'll surface real
+            places worth the plane ticket, picked and described by people who've
+            actually been there.
+          </p>
+          <div class="social-row" aria-label="Follow us on social media">
+            <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+            <a href="#" aria-label="Facebook" title="Facebook">📘</a>
+            <a href="#" aria-label="X / Twitter" title="X">🐦</a>
+            <a href="#" aria-label="YouTube" title="YouTube">▶️</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro">
+        <div class="container">
+          <span class="tag">Welcome</span>
+          <h2>Three ways to search, endless places to go</h2>
+          <div class="intro-grid">
+            <div class="intro-card">
+              <span class="tag">Beaches</span>
+              <p>Coastlines worth the sunburn — from lagoons to hidden coves.</p>
+            </div>
+            <div class="intro-card">
+              <span class="tag">Temples</span>
+              <p>Ancient stone and quiet courtyards, from Cambodia to Kyoto.</p>
+            </div>
+            <div class="intro-card">
+              <span class="tag">Countries</span>
+              <p>Full country guides with our favorite cities inside each one.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-section">
+        <div class="container">
+          <div class="results-heading">
+            <h2>Recommendations</h2>
+            <span class="results-status" id="results-status">
+              Search "beach", "temple", or a country name to get started
+            </span>
+          </div>
+          <div class="results-grid" id="results-grid"></div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ===================== ABOUT PAGE ===================== -->
+    <section class="page-section" id="page-about" data-page="about" hidden>
+
+      <section class="page-header">
+        <div class="container">
+          <h1>About Wandergram</h1>
+          <p>
+            We're a small team obsessed with the idea that a good recommendation
+            beats an endless scroll. Every place on this site has been picked,
+            not algorithmically ranked.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="container">
+          <h2>Our story</h2>
+          <p>
+            Wandergram started in 2019 as a shared notes document between three
+            friends who kept sending each other the same travel questions:
+            "where should we actually go?" It grew into a small studio that
+            curates beaches, temples, and country guides for travelers who want
+            fewer options and better ones.
+          </p>
+          <p>
+            We don't accept payment for placement. Every recommendation on this
+            site is here because someone on our team has stood in that spot,
+            in person, and thought it was worth telling you about.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="container">
+          <h2>The team</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-avatar">A</div>
+              <div class="team-name">Amara Osei</div>
+              <div class="team-role">Founder &amp; Editor</div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">L</div>
+              <div class="team-name">Leo Martins</div>
+              <div class="team-role">Lead Photographer</div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">S</div>
+              <div class="team-name">Sana Rahman</div>
+              <div class="team-role">Destination Researcher</div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar">T</div>
+              <div class="team-name">Theo Bakker</div>
+              <div class="team-role">Web Developer</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ===================== CONTACT PAGE ===================== -->
+    <section class="page-section" id="page-contact" data-page="contact" hidden>
+
+      <section class="page-header">
+        <div class="container">
+          <h1>Get in touch</h1>
+          <p>
+            Found a broken link, have a place we should feature, or just want to
+            say hi? Send us a message below.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-section">
+        <div class="container contact-layout">
+          <div class="contact-info">
+            <h3>Other ways to reach us</h3>
+            <ul>
+              <li>Email: hello@wandergram.example</li>
+              <li>Response time: within 2 business days</li>
+              <li>Based in: Lisbon, Portugal</li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2026 Wandergram. Made for wanderers.</div>
+  </footer>
+
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
